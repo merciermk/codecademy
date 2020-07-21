@@ -9,8 +9,8 @@ if(runnerAge > 18 && earlyRegistered){
 }else if (runnerAge > 18 && !earlyRegistered) {
   runHour = 'Your start at 11:00 am';
 }else if (runnerAge === 18){
-  raceNumber = 'Not allowed';
-  runHour = 'You should see the registration desk.';
+  raceNumber = 'You cannot have your race number';
+  runHour = 'You should see the registration desk for more informations.';
 }
 else {
   // Young registrant
