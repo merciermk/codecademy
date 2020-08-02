@@ -1,3 +1,93 @@
-h1{
-    font-size: 50px;
+/* general */
+h2{
+    text-align: center;
+}
+h3{
+    font-size: 40px;
+}
+
+p{
+    font-size: 20px;
+}
+/* color */ 
+.color{
+    height: auto;
+    width: auto;
+    border: solid 2px;
+    text-align: center;
+    
+}
+
+.color1, .color2, .color3, .color4{
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: solid 2px;
+    height: 100px;
+    width: 100px;
+}
+
+.color1{
+    background-color: #2d5dcc;
+}
+
+.color2{
+    background-color: #d957d9;
+}
+
+.color3{
+    background-color: #4fe0b0;
+}
+
+.color4{
+    background-color: #efd9ca;
+}
+
+/* FONTS */
+.fonts{
+    height: auto;
+    width: auto;
+    
+}
+.fonts p{
+    margin-left: 5px;
+}
+.font1{
+    display: block;
+    height: auto;
+    width: auto;
+    margin-top: 10px;
+    border: solid gray;
+}
+.font1 h3{
+    
+    font-family: 'Dancing Script', cursive;
+}
+
+.font1 .regular{
+    font-family: 'Dancing Script';
+}
+
+.font1 .bold{
+    font-family: 'Dancing Script';
+    font-weight: 700;
+}
+
+.font2{
+    display: block;
+    height: auto;
+    width: auto;
+    border: solid gray;
+    margin-top: 10px;
+}
+
+.font3{
+    display: block;
+    height: auto;
+    width: auto;
+    border: solid gray;
+    margin-top: 10px;
 }
