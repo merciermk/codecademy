@@ -2,6 +2,7 @@
 h2{
     text-align: center;
 }
+
 h3{
     font-size: 40px;
 }
@@ -56,27 +57,22 @@ p{
     margin-left: 5px;
 }
 .font1{
+    font-family: 'Dancing Script', cursive;
     display: block;
     height: auto;
     width: auto;
     margin-top: 10px;
     border: solid gray;
 }
-.font1 h3{
+
+
+.bold{
     
-    font-family: 'Dancing Script', cursive;
-}
-
-.font1 .regular{
-    font-family: 'Dancing Script';
-}
-
-.font1 .bold{
-    font-family: 'Dancing Script';
     font-weight: 700;
 }
 
 .font2{
+    font-family: Comfortaa;
     display: block;
     height: auto;
     width: auto;
