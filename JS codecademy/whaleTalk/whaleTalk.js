@@ -1,6 +1,6 @@
 // Objectif : ne recupérer que les voyelles, sauf le Y, d'une phrase
 
-let sentence = 'Fuck Society';
+let sentence = 'Fuck society and have a good day';
 
 
 let result = [];
@@ -12,16 +12,21 @@ for(let i = 0; i < sentence.length; i++){
     }
 }
 
-for(let z = 0; z < result.length; z++){
-    whale[z] = result[z];
+for(let y = 0; y < result.length; y++){
+    whale[y] = result[y];
 }
 
-for(let y = 0; y < result.length; y++){
+for( y = 0; y < result.length; y++){
     if(result[y] === 'u'){
-       
-       whale.splice(y,0,'u');
+       whale.splice(y + 1, 0, 'u');
+       console.log(y);
+    }
+   
+}
+
+for( y = 0; y < result.length; y++){
+    if(result[y] === 'a'){
+        whale.splice(y +1,0,'a');
     }
 }
-
-
-console.log(whale.join(''));
+console.log(whale.join());
