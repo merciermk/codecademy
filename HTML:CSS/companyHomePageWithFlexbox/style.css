@@ -1,0 +1,43 @@
+.body{
+    font-size: 16px;
+}
+
+h2{
+    font-size: 2rem;
+}
+.presentation{    
+    background-image: url(./img/skyscrapers-background-title.jpg);
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 3%;
+}
+
+.prestext{
+    background-color: aliceblue;
+    width: 100%;
+    text-align: center;
+}
+
+.portocompagny{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 600px;    
+}
+
+.portofolio img{
+    height: 140px;
+    width: 180px;
+}
+
+.portoimg{
+    display: flex;
+    align-items: center;
+    height: 140px;
+    width: 300px;
+    min-width: 350px;
+    margin: 5px;
+    
+}
