@@ -23,7 +23,7 @@ h2{
 .portocompagny{
     display: flex; 
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     min-width: 600px;    
 }
 
@@ -40,4 +40,31 @@ h2{
     min-width: 350px;
     margin: 5px;
     
+}
+
+/*our team*/
+
+
+
+.team{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    
+    align-items: center;
+    background-image: url(./img/blurred-road-background.jpg);
+}
+
+.teammember{
+    width: 200px;
+    height: auto;
+    margin: 20px;
+    text-align: center;
+    color: whitesmoke;
+   
+
+}
+.teammember img{
+  height: 300px;
+  width: 200px;
 }
