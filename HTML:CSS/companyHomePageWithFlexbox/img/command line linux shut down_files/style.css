@@ -1,22 +1,9 @@
-body{
-    font-size: 18px;
-    font-family: 'Lexend Mega', sans-serif;
-}
-h1{
-    text-align: center;
-}
-h2{
-    font-size: 2rem;
+.body{
+    font-size: 16px;
 }
 
-nav{
-    display: flex;
-    justify-content: center;
-}
-.menu{
-    color: black;
-    margin-left: 20px;
-    margin-right: 20px;
+h2{
+    font-size: 2rem;
 }
 .presentation{    
     background-image: url(./img/skyscrapers-background-title.jpg);
@@ -28,7 +15,7 @@ nav{
 }
 
 .prestext{
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: aliceblue;
     width: 100%;
     text-align: center;
 }
@@ -38,10 +25,6 @@ nav{
     flex-wrap: wrap;
     justify-content: space-around;
     min-width: 600px;    
-}
-
-.portocompagny p{
-    margin-left: 5px;
 }
 
 .portofolio img{
@@ -59,7 +42,6 @@ nav{
     
 }
 
-
 /*our team*/
 
 
@@ -76,7 +58,6 @@ nav{
 .teammember{
     width: 200px;
     height: auto;
-    min-height: 500px;
     margin: 20px;
     text-align: center;
     color: whitesmoke;
