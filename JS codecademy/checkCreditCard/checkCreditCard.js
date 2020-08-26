@@ -22,39 +22,84 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3];
 // An array of all the arrays above
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5];
 
+const example = [4,5,5,6,7,3,7,5,8,6,8,9,9,8,5,5];
+const example2 = [4,5,3,9,6,8,9,8,8,7,7,0,5,7,9,8];
 
 // Add your functions below:
 
-function validateCred(batch){
-  let i = batch.length - 1;
-  let validator = [];
-  let total = 0;
-  for(i; i >= 0; i--) {
-    if(i == batch.length -1 ){
-        validator[i] = batch[i];
-    }else{
-        validator[i] = batch[i] *2;
-    }
-  }
-  for(let y = 0; y < validator.length; y++){
-    if(validator[y] > 9){
-        validator[y] = validator[y] - 9;
-      }
-    total = total + validator[y];
-  }
+function validateCred(arr){
  
-  if(total % 10 == 0){
-      return true;
-  }else {
-      return false;
-    }
-}
-//console.log(validateCred(batch[2]));
+  let copyCardNb = Array.from(arr);
+  copyCardNb.reverse();
+  let y = copyCardNb[0];
+  copyCardNb.shift();
+  
+  let i = 0;
+ 
+  let total = 0;
 
-console.log(validateCred(4929978779674396));
-console.log(validateCred(4539951133038246170));
-console.log(validateCred(batch[4]));
-console.log(validateCred(batch[5]));
-console.log(validateCred(batch[6]));
-console.log(validateCred(batch[7]));
-console.log(validateCred(batch[8]));
+  for(i; i < (copyCardNb.length); i++ ){
+    if(i % 2 === 0){
+      if((copyCardNb[i] * 2) > 9){
+        total = total + (copyCardNb[i] * 2 - 9);
+      }else {
+        total = total + (copyCardNb[i] * 2);
+      }
+    }else {
+      total = total + copyCardNb[i];
+    }
+    
+  }
+  total = total + y;
+
+  //verification par modulo
+  if(total % 10 === 0){
+    return true;
+  }else{
+    return false;
+  }
+
+}
+
+function findInvalidCard(arrays){
+  let i = 0;
+  let y = 0;
+  let wrongNumbers = [];
+
+  for(i ; i < arrays.length - 1; i++){
+    
+    if(validateCred(arrays[i]) == false){
+      wrongNumbers[y] = arrays[i];
+      y++;
+    }
+  }
+  return wrongNumbers;
+}
+
+function idInvalidCardCompanies(arra){
+  let i = 0;
+  let y = 0;
+  let wrongNb = findInvalidCard(arra);
+  let invalidCardComp = [];
+ for(i; i < wrongNb.length -1; i++){
+  if(wrongNb[i][0] == 3){
+      invalidCardComp[y] = "American express";
+      y++;
+    }else if(wrongNb[i][0] == 4){
+      invalidCardComp[y] = "Visa";
+      y++;
+    }else if(wrongNb[i][0] == 5){
+      invalidCardComp[y] = "Mastercard";
+      y++;
+    }else if(wrongNb[i][0] == 6){
+      invalidCardComp[y] = "Discover";
+      y++;
+    }else {
+      invalidCardComp[y] = "Company not found";
+      y++;
+    }
+ }
+ console.log(invalidCardComp);
+}
+console.log(idInvalidCardCompanies(batch));
+
