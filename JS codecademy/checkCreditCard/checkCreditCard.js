@@ -99,7 +99,7 @@ function idInvalidCardCompanies(arra){
       y++;
     }
  }
- console.log(invalidCardComp);
+ return `this is the list of company name's with invalid credit card : ${invalidCardComp}`;
 }
 console.log(idInvalidCardCompanies(batch));
 
